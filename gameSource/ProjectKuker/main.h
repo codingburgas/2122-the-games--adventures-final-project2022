@@ -10,3 +10,4 @@ using namespace sf;
 
 extern const int widthX;
 extern const int heightY;
+extern RenderWindow window;
