@@ -1,0 +1,193 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+/* navigation bar */
+
+header{
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    background-color: transparent;
+    background-size: cover;
+}
+
+.logo{
+    position: fixed;
+    margin:36px;
+    margin-top: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    list-style: none;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+nav{
+    position: fixed;
+    background-color: #000;
+    width: 100%;
+}
+
+nav ul{
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    margin-right: 20px;
+    transition: 1s;
+}
+
+nav.black ul{
+    background: #000;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* homepage */
+
+/* butona shte bude smenen */
+.download{
+    height: 70px;
+    width: auto;
+    font-size: 30px;
+    margin-top: 340px;
+    margin-left: 520px;
+    margin-right: 520px;
+    margin-bottom: 160px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: sans-serif;
+    list-style: none;
+    overflow: hidden;
+    text-decoration: none;
+    outline: solid white;
+    outline-width: 3px;
+    outline-color: rgb(83, 83, 83);
+    background-color: transparent;
+    box-sizing: border-box;
+}
+.button{
+    font-family: sans-serif;
+    color: rgb(65, 65, 65);
+    list-style: none;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 16px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#home{
+    background-image: url(indexphotos/homebg.png);
+    background-color: rgb(255, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 2px solid yellow;
+    width: 100%;
+    height: 90%;
+}
+
+.gamename{
+    font-style: oblique;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    margin-top: -30px;
+}
+
+/* info about the game */
+h1{
+    font-size: 36px;
+}
+h3{
+    font-size: 22px;
+    color:yellow;
+}
+
+#reason{
+    background-image: url(indexphotos/reason.jpg);
+    background-color: rgb(255, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 2px solid yellow;
+    font-size: 20px;
+    padding: 0;
+    width: 100%; 
+    overflow-x: hidden;
+}
+.reason{
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 18px;
+}
+
+#explore{
+    background-image: url(indexphotos/explore.jpg);
+    background-color: rgb(255, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 2px solid yellow;
+    font-size: 20px;
+    padding: 0;
+    width: 100%; 
+    overflow-x: hidden;
+}
+.explore{
+    text-align: right;
+    color: white;
+    margin-right: 75px;
+    margin-top: 200px;
+    margin-bottom: 180px;
+    font-size: 16px;
+}
+
+#kuker{
+    background-image: url(indexphotos/kuker.png);
+    background-color: rgb(255, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 2px solid yellow;
+    font-size: 20px;
+    padding: 0;
+    width: 100%; 
+    overflow-x: hidden;
+}
+.kuker{
+    text-align: left;
+    color: white;
+    margin-left: 75px;
+    margin-top: 200px;
+    margin-bottom: 180px;
+    font-size: 16px;
+}
+
+
