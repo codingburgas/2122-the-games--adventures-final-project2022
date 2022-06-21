@@ -71,6 +71,38 @@ nav ul li a{
 
 /* homepage */
 
+/* butona shte bude smenen */
+.download{
+    height: 70px;
+    width: auto;
+    font-size: 30px;
+    margin-top: 340px;
+    margin-left: 520px;
+    margin-right: 520px;
+    margin-bottom: 160px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: sans-serif;
+    list-style: none;
+    overflow: hidden;
+    text-decoration: none;
+    outline: solid white;
+    outline-width: 3px;
+    outline-color: rgb(83, 83, 83);
+    background-color: transparent;
+    box-sizing: border-box;
+}
+.button{
+    font-family: sans-serif;
+    color: rgb(65, 65, 65);
+    list-style: none;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 16px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
 
 #home{
     background-image: url(indexphotos/homebg.png); /*backcrounda shte bude smenen*/
