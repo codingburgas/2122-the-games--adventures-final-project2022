@@ -77,8 +77,8 @@ nav ul li a{
     width: auto;
     font-size: 30px;
     margin-top: 340px;
-    margin-left: 720px;
-    margin-right: 720px;
+    margin-left: 600px;
+    margin-right: 600px;
     margin-bottom: 160px;
     border-radius: 3px;
     text-align: center;
@@ -88,30 +88,30 @@ nav ul li a{
     text-decoration: none;
     outline: solid white;
     outline-width: 3px;
-    outline-color: rgb(83, 83, 83);
+    outline-color: rgb(255, 255, 255);
     background-color: transparent;
     box-sizing: border-box;
 }
 .button{
     font-family: sans-serif;
-    color: rgb(65, 65, 65);
+    color: rgb(255, 255, 255);
     list-style: none;
     overflow: hidden;
     text-decoration: none;
     display: inline-block;
-    margin-top: 16px;
+    margin-top: 18px;
     margin-left: 60px;
     margin-right: 60px;
 }
 
 #home{
-    background-image: url(indexphotos/homebg.png); /*backcrounda shte bude smenen*/
+    background-image: url(indexphotos/homebg.png); /*backgrounda shte bude smenen*/
     background-color: rgb(255, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 2px solid yellow;
     width: 100%;
-    height: 90%;
+    height: 95%;
 }
 
 .gamename{
@@ -119,7 +119,7 @@ nav ul li a{
     text-align: center;
     color: white;
     font-size: 35px;
-    margin-top: -30px;
+    margin-top: 50px;
 }
 
 /* info about the game */
@@ -132,7 +132,7 @@ h3{
 }
 
 #reason{
-    background-image: url(indexphotos/reason.jpg); /*backcrounda shte bude smenen*/
+    background-image: url(indexphotos/reason.jpg); /*backgrounda shte bude smenen*/ 
     background-color: rgb(255, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
@@ -145,13 +145,14 @@ h3{
 .reason{
     text-align: center;
     color: white;
+    height: 90%;
     margin-top: 80px;
     margin-bottom: 80px;
     font-size: 18px;
 }
 
 #explore{
-    background-image: url(indexphotos/explore.jpg); /*backcrounda shte bude smenen*/
+    background-image: url(indexphotos/explore.jpg); /*backgrounda shte bude smenen*/ 
     background-color: rgb(255, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
@@ -171,7 +172,7 @@ h3{
 }
 
 #kuker{
-    background-image: url(indexphotos/kuker.png); /*backcrounda shte bude smenen*/
+    background-image: url(indexphotos/kuker.png); /*backgrounda shte bude smenen*/
     background-color: rgb(255, 0, 0); 
     background-repeat: no-repeat;
     background-size: cover;
