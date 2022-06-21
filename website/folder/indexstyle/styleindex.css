@@ -105,7 +105,7 @@ nav ul li a{
 }
 
 #home{
-    background-image: url(indexphotos/homebg.png);
+    background-image: url(indexphotos/homebg.png); /*backcrounda shte bude smenen*/
     background-color: rgb(255, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
@@ -132,7 +132,7 @@ h3{
 }
 
 #reason{
-    background-image: url(indexphotos/reason.jpg);
+    background-image: url(indexphotos/reason.jpg); /*backcrounda shte bude smenen*/
     background-color: rgb(255, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
@@ -151,7 +151,7 @@ h3{
 }
 
 #explore{
-    background-image: url(indexphotos/explore.jpg);
+    background-image: url(indexphotos/explore.jpg); /*backcrounda shte bude smenen*/
     background-color: rgb(255, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
@@ -171,8 +171,8 @@ h3{
 }
 
 #kuker{
-    background-image: url(indexphotos/kuker.png);
-    background-color: rgb(255, 0, 0);
+    background-image: url(indexphotos/kuker.png); /*backcrounda shte bude smenen*/
+    background-color: rgb(255, 0, 0); 
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 2px solid yellow;
