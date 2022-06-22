@@ -8,6 +8,7 @@ public:
 	RectangleShape hitbox;
 	Sprite sprite;
 	Texture texture;
+	View followPlayer;
 	float movementSpeed, crouchMovementSpeed, normalMovementSpeed;
 	Vector2f velocity;
 	float jumpHeight;

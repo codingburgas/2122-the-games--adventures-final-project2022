@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <time.h>
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 

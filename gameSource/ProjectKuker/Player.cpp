@@ -13,6 +13,8 @@ Player::Player(Vector2f pos, Vector2f size, float jumpHeight, string name = "Van
 	this->velocity  = velocity;
 	this->crouchMovementSpeed = crouchMovementSpeed;
 	this->normalMovementSpeed = normalMovementSpeed;
+	followPlayer.setCenter(hitbox.getPosition().x+widthX / 3, hitbox.getPosition().y+heightY/3);
+	followPlayer.setSize(Vector2f(widthX,heightY));
 }
 
 void Player::render(RenderTarget * target)
@@ -22,7 +24,7 @@ void Player::render(RenderTarget * target)
 
 void Player::playerInput()
 {
-	velocity.x = 0.f;
+	velocity.x *= 0.75f;
 
 	if (Keyboard::isKeyPressed(Keyboard::W) && canJump)
 	{
@@ -59,6 +61,7 @@ void Player::checkScreenCollision()
 	if (hitbox.getPosition().x < 0)
 	{
 		hitbox.setPosition(0, hitbox.getPosition().y);
+		(!canJump)?velocity.x = -velocity.x:velocity.x=0;
 	}
 	if (hitbox.getPosition().y < 0)
 	{
@@ -68,6 +71,7 @@ void Player::checkScreenCollision()
 	if (hitbox.getPosition().x + hitbox.getSize().x > widthX)
 	{
 		hitbox.setPosition(widthX - hitbox.getSize().x, hitbox.getPosition().y);
+		(!canJump) ? velocity.x = -velocity.x : velocity.x = 0;
 	}
 	if (hitbox.getPosition().y + hitbox.getSize().y > heightY)
 	{

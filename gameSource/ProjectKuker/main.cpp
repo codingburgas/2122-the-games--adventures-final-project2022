@@ -4,6 +4,8 @@ const int widthX = VideoMode::getDesktopMode().width;
 const int heightY = VideoMode::getDesktopMode().height;
 
 int main()
-{	window.setFramerateLimit(144);
+{	
+	srand(time(NULL));
+	window.setVerticalSyncEnabled(1);
 	mainMenu();
 }
