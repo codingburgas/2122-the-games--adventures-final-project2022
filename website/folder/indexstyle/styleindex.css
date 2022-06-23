@@ -69,6 +69,15 @@ nav ul li a{
     letter-spacing: 2px;
 }
 
+/*navbar animation*/
+
+nav ul li a:hover{
+    border-bottom: 2px solid white;
+    transition: 0.4 ease;
+    transition-duration: 100ms;
+    color:white;
+}
+
 /* homepage */
 
 /* butona shte bude smenen */
@@ -131,31 +140,12 @@ h3{
     color:yellow;
 }
 
-#reason{
-    background-image: url(indexphotos/reason.jpg); /*backgrounda shte bude smenen*/ 
-    background-color: rgb(255, 0, 0);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom: 2px solid yellow;
-    font-size: 20px;
-    padding: 0;
-    width: 100%; 
-    overflow-x: hidden;
-}
-.reason{
-    text-align: center;
-    color: white;
-    height: 90%;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    font-size: 18px;
-}
-
 #explore{
-    background-image: url(indexphotos/explore.jpg); /*backgrounda shte bude smenen*/ 
+    background-image: url(indexphotos/explore.jpg); /*backgrounda shte bude smenen*/
     background-color: rgb(255, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 0px;
     border-bottom: 2px solid yellow;
     font-size: 20px;
     padding: 0;
@@ -173,7 +163,7 @@ h3{
 
 #kuker{
     background-image: url(indexphotos/kuker.png); /*backgrounda shte bude smenen*/
-    background-color: rgb(255, 0, 0); 
+    background-color: rgb(255, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 2px solid yellow;
@@ -191,4 +181,58 @@ h3{
     font-size: 16px;
 }
 
+/*footer*/
+footer{
+    background-color: rgb(41, 41, 41);
+    height: auto;
+    width: 100%;
+    font-family: Arial, 'Times New Roman', sans-serif;
+    padding-top: -5px;
+    padding-bottom: -5px;
+    color:white;
+    overflow-x: hidden;
+    column-count: 2;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content p{
+    text-align: center;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: Arial, 'Times New Roman', sans-serif;
+    list-style: none;
+    color: white;
+    font-size: 18px;
+}
 
+.footer-content a{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 1000px;
+    margin-right: 43px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.socials li{
+    margin: 0 20px;
+}
+.socials a{
+    text-decoration: none;
+    color: white;
+}
+.socials a i{
+    font-size: 38px;
+}

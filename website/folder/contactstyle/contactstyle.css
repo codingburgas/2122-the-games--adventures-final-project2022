@@ -6,7 +6,12 @@ html,body{
 
 body{
     background-color: rgb(126, 122, 122);
-    font-family: sans-serif;
+    background-image: url(../indexstyle/indexphotos/explore.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: Arial, 'Times New Roman', sans-serif;
+    text-align: center;
+    color: white;
 }
 
 /* navigation bar */
@@ -64,4 +69,103 @@ nav ul li a{
     font-family: sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+/*navbar animation*/
+
+nav ul li a:hover{
+    border-bottom: 2px solid white;
+    transition: 0.4 ease;
+    transition-duration: 100ms;
+    color:white;
+}
+
+/* contact */
+.contact{
+    background-color: rgb(28, 43, 43);
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 90px;
+    height: 100%;
+    width: 1200px;
+    margin:-60px auto;
+    text-align: left;
+}
+
+.contact h1{
+    text-align: left;
+    margin-left: 200px;
+    font-size: 45px;
+}
+.contact h3{
+    text-align: left;
+    font-size: 30px;
+    margin-left: 200px;
+}
+.contact p{
+    margin-left: 200px;
+    margin-top: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+.contact a{
+    font-size: 20px;
+    color:yellow
+}
+/*footer*/
+footer{
+    background-color: rgb(41, 41, 41);
+    height: auto;
+    width: 100%;
+    font-family: Arial, 'Times New Roman', sans-serif;
+    padding-top: -5px;
+    padding-bottom: -5px;
+    color:white;
+    overflow-x: hidden;
+    column-count: 2;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content p{
+    text-align: center;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: Arial, 'Times New Roman', sans-serif;
+    list-style: none;
+    color: white;
+    font-size: 18px;
+}
+
+.footer-content a{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 1000px;
+    margin-right: 43px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.socials li{
+    margin: 0 20px;
+}
+.socials a{
+    text-decoration: none;
+    color: white;
+}
+.socials a i{
+    font-size: 38px;
 }

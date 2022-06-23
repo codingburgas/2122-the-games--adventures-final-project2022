@@ -1,0 +1,17 @@
+body{
+    background-image: url(explore.jpg);
+    background-size: cover;
+    color:white;
+    text-align: center;
+    margin-top: 400px;
+}
+h1{
+    font-size: 50px;
+}
+a{
+    margin-top: 60px;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 25px;
+}
