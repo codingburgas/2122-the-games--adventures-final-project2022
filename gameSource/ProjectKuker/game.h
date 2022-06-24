@@ -10,3 +10,5 @@ extern float gravity;
 extern float playerHeight;
 extern vector<Room> rooms;
 vector<Room> generateMap();
+
+void init();

@@ -1,6 +1,7 @@
 #include "Player.h"
 
-Player::Player(Vector2f pos, Vector2f size, float jumpHeight, string name = "Vanko",
+Player::Player() {}
+Player::Player(Vector2f pos, Vector2f size, float jumpHeight,
 	float crouchMovementSpeed = 0.25f, float normalMovementSpeed = 0.5f, Vector2f velocity = {0,0})
 {
 	hitbox.setSize(size);
@@ -8,7 +9,6 @@ Player::Player(Vector2f pos, Vector2f size, float jumpHeight, string name = "Van
 	hitbox.setFillColor(Color::Green);
 	canJump = 1;
 	this->jumpHeight = jumpHeight;
-	this->name = name;
 	this->movementSpeed = normalMovementSpeed;
 	this->velocity  = velocity;
 	this->crouchMovementSpeed = crouchMovementSpeed;
@@ -51,8 +51,8 @@ void Player::playerInput()
 		velocity.x += movementSpeed;
 	}
 
-	velocity.y += gravity * float(dt.asSeconds()*10);
-	hitbox.move(velocity * float(dt.asMilliseconds()));
+	velocity.y += gravity * float(dt.asSeconds());
+	hitbox.move(velocity * float(dt.asSeconds()));
 	checkScreenCollision();
 }
 
@@ -61,7 +61,7 @@ void Player::checkScreenCollision()
 	if (hitbox.getPosition().x < 0)
 	{
 		hitbox.setPosition(0, hitbox.getPosition().y);
-		(!canJump)?velocity.x = -velocity.x:velocity.x=0;
+		(!canJump)?velocity.x = -velocity.x : 0;
 	}
 	if (hitbox.getPosition().y < 0)
 	{
@@ -71,7 +71,7 @@ void Player::checkScreenCollision()
 	if (hitbox.getPosition().x + hitbox.getSize().x > widthX)
 	{
 		hitbox.setPosition(widthX - hitbox.getSize().x, hitbox.getPosition().y);
-		(!canJump) ? velocity.x = -velocity.x : velocity.x = 0;
+		(!canJump) ? velocity.x = -velocity.x : 0;
 	}
 	if (hitbox.getPosition().y + hitbox.getSize().y > heightY)
 	{
