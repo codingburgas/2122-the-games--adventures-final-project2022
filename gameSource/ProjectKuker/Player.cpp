@@ -1,20 +1,24 @@
 #include "Player.h"
-
 Player::Player() {}
-Player::Player(Vector2f pos, Vector2f size, float jumpHeight,
-	float crouchMovementSpeed = 0.25f, float normalMovementSpeed = 0.5f, Vector2f velocity = {0,0})
+Player::Player(Vector2f pos, Vector2f size, float jumpHeight, Texture& texture,
+	float crouchMovementSpeed = 0.25f, float normalMovementSpeed = 0.5f, Vector2f velocity = { 0,0 })
 {
+	faceRight = true;
+	canJump = false;
+	fliped = false;
 	hitbox.setSize(size);
 	hitbox.setPosition(pos);
-	hitbox.setFillColor(Color::Green);
-	canJump = 1;
+	hitbox.setFillColor(Color::White);
+	hitbox.setTexture(&texture);
+	
 	this->jumpHeight = jumpHeight;
 	this->movementSpeed = normalMovementSpeed;
 	this->velocity  = velocity;
 	this->crouchMovementSpeed = crouchMovementSpeed;
 	this->normalMovementSpeed = normalMovementSpeed;
+
 	followPlayer.setCenter(hitbox.getPosition().x+widthX / 3, hitbox.getPosition().y+heightY/3);
-	followPlayer.setSize(Vector2f(widthX,heightY));
+	followPlayer.setSize(Vector2f(widthX*.8,heightY*.8));
 }
 
 void Player::render(RenderTarget * target)
@@ -22,9 +26,16 @@ void Player::render(RenderTarget * target)
 	target->draw(this->hitbox);
 }
 
-void Player::playerInput()
+void Player::playerInput(Room*& currentRoom)
 {
-	velocity.x *= 0.75f;
+	if (canJump) {
+		velocity.x *= .8;
+	}
+
+	if (velocity.x > 3*movementSpeed && velocity.x > 0)
+		velocity.x = 3*movementSpeed;
+	else if(velocity.x < 3 * -movementSpeed && velocity.x < 0)
+		velocity.x = 3 * -movementSpeed;
 
 	if (Keyboard::isKeyPressed(Keyboard::W) && canJump)
 	{
@@ -44,38 +55,70 @@ void Player::playerInput()
 
 	if (Keyboard::isKeyPressed(Keyboard::A))
 	{
-		velocity.x -= movementSpeed;
+		faceRight = false;
+
+		if (canJump)
+			velocity.x -= movementSpeed;
+		else
+			velocity.x -= crouchMovementSpeed;
+
 	}
 	if (Keyboard::isKeyPressed(Keyboard::D))
 	{
-		velocity.x += movementSpeed;
+		faceRight = true;
+		if (canJump)
+			velocity.x += movementSpeed;
+		else
+			velocity.x += crouchMovementSpeed;
 	}
 
 	velocity.y += gravity * float(dt.asSeconds());
 	hitbox.move(velocity * float(dt.asSeconds()));
-	checkScreenCollision();
+	if (faceRight)
+	{
+		if (fliped)
+		{
+			textureImage = hitbox.getTexture()->copyToImage();
+			textureImage.flipHorizontally();
+			texture.loadFromImage(textureImage);
+			hitbox.setTexture(&texture);
+			fliped = 0;
+		}
+	}
+	else
+	{
+		if (!fliped) 
+		{
+			textureImage = hitbox.getTexture()->copyToImage();
+			textureImage.flipHorizontally();
+			texture.loadFromImage(textureImage);
+			hitbox.setTexture(&texture);
+			fliped = 1;
+		}
+	}
+
+	player.checkCollision(currentRoom);
 }
 
-void Player::checkScreenCollision()
+void Player::checkCollision(Room *&currentRoom)
 {
-	if (hitbox.getPosition().x < 0)
+	if (hitbox.getPosition().x < currentRoom->boundingBox.getPosition().x - currentRoom->boundingBox.getSize().x / 2)
 	{
-		hitbox.setPosition(0, hitbox.getPosition().y);
-		(!canJump)?velocity.x = -velocity.x : 0;
+		hitbox.setPosition(currentRoom->boundingBox.getPosition().x - currentRoom->boundingBox.getSize().x / 2, hitbox.getPosition().y);
+		(!canJump) ? velocity.x = -velocity.x / 2 : 0;
 	}
-	if (hitbox.getPosition().y < 0)
+	if (hitbox.getPosition().y < currentRoom->boundingBox.getPosition().y - currentRoom->boundingBox.getSize().y / 2)
 	{
-		hitbox.setPosition(hitbox.getPosition().x, 0);
+		hitbox.setPosition(hitbox.getPosition().x, currentRoom->boundingBox.getPosition().y - currentRoom->boundingBox.getSize().y / 2);
 	}
-
-	if (hitbox.getPosition().x + hitbox.getSize().x > widthX)
+	if (hitbox.getPosition().x + hitbox.getSize().x > currentRoom->boundingBox.getPosition().x + currentRoom->boundingBox.getSize().x / 2)
 	{
-		hitbox.setPosition(widthX - hitbox.getSize().x, hitbox.getPosition().y);
-		(!canJump) ? velocity.x = -velocity.x : 0;
+		hitbox.setPosition(currentRoom->boundingBox.getPosition().x + currentRoom->boundingBox.getSize().x / 2 - hitbox.getSize().x , hitbox.getPosition().y);
+		(!canJump) ? velocity.x = -velocity.x / 2 : 0;
 	}
-	if (hitbox.getPosition().y + hitbox.getSize().y > heightY)
+	if (hitbox.getPosition().y + hitbox.getSize().y > currentRoom->boundingBox.getPosition().y + currentRoom->boundingBox.getSize().y / 2)
 	{
-		hitbox.setPosition(hitbox.getPosition().x, heightY - hitbox.getSize().y);
+		hitbox.setPosition(hitbox.getPosition().x, currentRoom->boundingBox.getPosition().y + currentRoom->boundingBox.getSize().y / 2 - hitbox.getSize().y);
 		canJump = 1;
 	}
 }
