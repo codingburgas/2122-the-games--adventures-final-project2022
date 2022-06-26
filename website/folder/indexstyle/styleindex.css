@@ -23,8 +23,9 @@ header{
 
 .logo{
     position: fixed;
-    margin:36px;
-    margin-top: 5px;
+    margin-left: 35px;
+    margin-top: -10px;
+    margin-bottom: 20px;
     color: white;
     font-weight: bold;
     font-size: 24px;
@@ -79,74 +80,57 @@ nav ul li a:hover{
 }
 
 /* homepage */
-
-/* butona shte bude smenen */
 .download{
-    height: 70px;
-    width: auto;
-    font-size: 30px;
-    margin-top: 340px;
-    margin-left: 600px;
-    margin-right: 600px;
-    margin-bottom: 160px;
-    border-radius: 3px;
-    text-align: center;
-    font-family: sans-serif;
-    list-style: none;
-    overflow: hidden;
-    text-decoration: none;
-    outline: solid white;
-    outline-width: 3px;
-    outline-color: rgb(255, 255, 255);
-    background-color: transparent;
-    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    position:static;
+    display: flex; 
 }
-.button{
-    font-family: sans-serif;
-    color: rgb(255, 255, 255);
-    list-style: none;
-    overflow: hidden;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 18px;
-    margin-left: 60px;
-    margin-right: 60px;
+.btn{
+    border-radius: 10px;
+    width: 350px;
+    height: 75px;
+    font-size: 2.1rem;
+    background-color: rgba(90, 90, 90, 0.897);
+    cursor: pointer;
+    border: none;
+    color: yellow;
+    transition: .3s;
+    margin-top: 200px;
+    
+}
+
+.btn:hover{
+    background-color: yellow;
+    color: rgba(90, 90, 90, 0.726);
 }
 
 #home{
-    background-image: url(indexphotos/homebg.png); /*backgrounda shte bude smenen*/
     background-color: rgb(116, 116, 116);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;  
     background-size: cover;
     overflow: hidden;
     position: relative;
-    background-repeat: no-repeat;
     border-bottom: 2px solid yellow;
     width: 100%;
     height: 95%;
-    animation: change 30s infinite ease;
+    animation: change 10s infinite ease-in-out;
 }
 
 @keyframes change{
-    20%
+    0%
     {
-        background-image: url(indexphotos/explore.jpg);
+        background-image: url(indexphotos/homebg.png);
     }
-    40%
+    50%
     {
-        background-image: url(indexphotos/reason.jpg);
-    }
-    60%
-    {
-        background-image: url(indexphotos/kukers.png);
-    }
-    80%
-    {
-        background-image: url(indexphotos/supportkuker.jpg);
+        background-image: url(indexphotos/kukerbg.png);
+
     }
     100%
     {
-        background-image: url(indexphotos/homebg.png);
+        background-image: url(indexphotos/explore.jpg);
+ 
     }
 }
 
@@ -168,7 +152,7 @@ h3{
 }
 
 #explore{
-    background-image: url(indexphotos/explore.jpg); /*backgrounda shte bude smenen*/
+    background-image: url(indexphotos/explore.jpg); 
     background-color: rgb(255, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
@@ -189,7 +173,7 @@ h3{
 }
 
 #kuker{
-    background-image: url(indexphotos/kuker.png); /*backgrounda shte bude smenen*/
+    background-image: url(indexphotos/kuker.png); 
     background-color: rgb(255, 0, 0);
     background-repeat: no-repeat;
     background-size: cover;
@@ -229,7 +213,7 @@ footer{
 }
 .footer-content p{
     text-align: center;
-    margin: 10px auto;
+    margin: 20px auto;
     line-height: 28px;
     font-size: 16px;
     text-decoration: none;
@@ -238,9 +222,8 @@ footer{
     color: white;
     font-size: 18px;
 }
-
 .footer-content a{
-    margin-top: 30px;
+    padding-top: 20px;
     margin-bottom: 5px;
 }
 
@@ -250,7 +233,6 @@ footer{
     align-items: center;
     margin-right: 1000px;
     margin-right: 43px;
-    margin-top: 20px;
     margin-bottom: 5px;
 }
 .socials li{
@@ -263,3 +245,4 @@ footer{
 .socials a i{
     font-size: 38px;
 }
+
