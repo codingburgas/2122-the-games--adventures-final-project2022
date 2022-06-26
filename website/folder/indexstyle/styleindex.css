@@ -106,7 +106,7 @@ nav ul li a:hover{
 }
 
 #home{
-    background-color: rgb(116, 116, 116);
+    background-color: rgb(66, 62, 62);
     background-repeat: no-repeat;  
     background-size: cover;
     overflow: hidden;
@@ -114,7 +114,7 @@ nav ul li a:hover{
     border-bottom: 2px solid yellow;
     width: 100%;
     height: 95%;
-    animation: change 10s infinite ease-in-out;
+    animation: change 15s infinite ease-in-out;
 }
 
 @keyframes change{
@@ -153,7 +153,7 @@ h3{
 
 #explore{
     background-image: url(indexphotos/explore.jpg); 
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(66, 62, 62);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;
@@ -173,10 +173,10 @@ h3{
 }
 
 #kuker{
-    background-image: url(indexphotos/kuker.png); 
-    background-color: rgb(255, 0, 0);
-    background-repeat: no-repeat;
+    background-image:linear-gradient(to right, rgb(0, 0, 0), rgba(20, 20, 20, 0.856)), url('kukerbg.png');
     background-size: cover;
+    background-color: rgb(66, 62, 62);
+    background-position: center;
     border-bottom: 2px solid yellow;
     font-size: 20px;
     padding: 0;
@@ -215,6 +215,7 @@ footer{
     text-align: center;
     margin: 20px auto;
     line-height: 28px;
+    padding-top: 2px;
     font-size: 16px;
     text-decoration: none;
     font-family: Arial, 'Times New Roman', sans-serif;
