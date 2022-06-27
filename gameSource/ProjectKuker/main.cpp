@@ -7,5 +7,5 @@ int main()
 {	
 	srand(time(NULL));
 	window.setVerticalSyncEnabled(1);
-	game();
+	mainMenu();
 }

@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="init.cpp" />
     <ClCompile Include="main.cpp" />

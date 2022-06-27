@@ -6,11 +6,9 @@
 extern Time dt;
 extern RectangleShape background;
 void game();
-void findCurRoom(std::vector<Room>& map, Room*& currentRoom);
 extern float gravity;
 extern float playerHeight;
-extern Texture playerTexture;
 extern vector<Room> rooms;
-vector<Room> generateMap(Texture& roomTexture);
+vector<Room> generateMap();
 
-void init(Texture& roomTexture);
+void init();

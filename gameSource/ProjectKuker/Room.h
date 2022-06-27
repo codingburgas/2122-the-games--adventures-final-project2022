@@ -3,11 +3,11 @@
 class Room
 {
 public:
+	Texture texture;
 	RectangleShape boundingBox;
-	bool uFilled, rFilled, dFilled, lFilled;
-	vector<RectangleShape> doors;
+	int type;
+	vector<Vertex> doorPoints;
+	string doors;
 	Room();
-	Room(Vector2f size, Texture& texture);
-
-	bool collision(RectangleShape& player);
+	Room(RectangleShape boundingBox, Texture texture);
 };
